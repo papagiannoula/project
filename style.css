@@ -1,0 +1,269 @@
+/*----------RESET----------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*---------- MAIN STYLING ----------*/
+body {
+    background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+    line-height: 1.6em;
+    /* overflow: hidden;*/
+}
+
+a {
+    text-decoration: none;
+}
+@font-face {
+    font-family: firstfont;
+    src: url(./fonts/ZenDots-Regular.ttf);
+}
+
+@font-face {
+    font-family: secondfont ;
+    src: url(./fonts/JosefinSans-VariableFont_wght.ttf);
+}
+
+h1 {
+    font-family: firstfont;
+    color: aliceblue;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgb(230, 152, 253);
+    font-size: 2em;
+    padding-bottom: 20px;
+}
+
+h2,
+h3,
+h4,
+p,
+a {
+    font-family: secondfont;
+    color: aliceblue;
+}
+
+.logo {
+    padding-top: 20px;
+}
+
+/*---------- UTILITY CLASSES ----------*/
+.container {
+    margin: auto;
+    max-width: 1200px;
+    overflow: auto;
+    /* padding: 0 20px; */
+}
+
+.btn {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    background: #9599e2;
+    padding: 13px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #abaffa;
+}
+
+/*---------NAVBAR-----------*/
+.navbar {
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0);
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-container {
+    width: 1100px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 50px 20px;
+}
+      
+.navbar li a:hover {
+    text-shadow: 2px 2px 5px rgb(230, 152, 253);
+    font-size: 1.1em;
+}
+.nav-container h2 a {
+    font-family: firstfont;
+}    
+/* .logo h1 {
+    color: aliceblue;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+    padding-top: 70px;
+} */
+
+/*------------ HOME -------------*/
+/* CAROUSEL */
+.carousel {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+} /*change everything later*/
+
+/*----------INFO SECTION----------*/
+.flex-main {
+    display: flex;
+    margin-top: 20px; /*to change*/
+    flex-direction: column;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    flex-basis: 2;
+    justify-content: space-around;
+}
+
+#upper-section, #bottom-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-img {
+    height: 352px;
+    flex-grow: 2;
+}
+
+.right-img {
+    background: url(./img/news.jpg) no-repeat center center/cover;
+}
+
+.left-img {
+    background: url(./img/merch.png) no-repeat center center/cover;
+}
+
+.flex-content {
+    background: #E0C3FC;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 3;
+}
+
+/*---------------FOOTER----------------------*/
+footer h5 {
+    color: rgba(255, 255, 255, 0.741);
+    text-align: center;
+}
+
+/*--------------------ABOUT---------------------*/
+/*-----------------CONTENT------------------*/
+.flex-container {
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+    gap: 40px;
+}
+.right-side img {
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.left-side h1,
+.left-side p {
+    padding: 20px;
+    text-align: center;
+    color: aliceblue;
+}
+.left-side h1{
+    text-shadow: 2px 2px 5px rgb(230, 152, 253);
+}
+.left-side p {
+    font-size: large;
+}
+.left-side {
+    width: 50vw;
+}
+.top {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+.bottom {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+.flex-container img:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px 7px #fff, 0 0 20px 15px #f0f, 0 0 35px 22px #0ff;
+}
+
+/* --------------MERCH--------------- */
+
+.box {
+    background: #E0C3FC;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 2;
+}
+
+.item {
+    /* width: 50%; */
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+}
+
+.right, .left {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* --------------CONTACT--------------- */
+
+.contact-container {
+    padding-top: 30px;
+    /* background: #E0C3FC; */
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+.item2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+
+}
+
+
+
+
