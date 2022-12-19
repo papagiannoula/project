@@ -6,13 +6,39 @@
 }
 /*---------- MAIN STYLING ----------*/
 body {
-    background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-    font-family: Arial, Helvetica, sans-serif;
+    /* background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+    background: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe);
     font-size: 1vw;
     line-height: 1.6em;
-    /* overflow: hidden;*/
+    background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+	        animation: gradient 15s ease infinite;    /* overflow: hidden;*/
 }
 
+/* for the background */
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 a {
     text-decoration: none;
 }
@@ -68,7 +94,9 @@ a {
 }
 
 .btn:hover {
-    background: #abaffa;
+    background: transparent;
+    border: 2px solid #9599e2;
+    margin-top: 5px;
 }
 
 /*---------NAVBAR-----------*/
@@ -111,6 +139,12 @@ a {
 } */
 
 /*------------ HOME -------------*/
+.header h1 {
+    display: flex;
+    justify-content: center;
+    font-size:120px;
+    padding: 2em;
+}
 /* CAROUSEL */
 .carousel {
     display: block;
@@ -149,17 +183,36 @@ a {
 }
 
 .flex-content {
-    background: #E0C3FC;
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 3px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-grow: 3;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
 }
 
 /*---------------FOOTER----------------------*/
-footer h5 {
+.footer {
+    display: flex;
+    flex-direction: row;
+}
+.footer div {
+    text-align: center;
+}
+.col-2 {
+    flex-grow: 2;
+}
+
+.footer div h3 {
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.col-1 a
+.footer h5 {
     color: rgba(255, 255, 255, 0.741);
     text-align: center;
 }
@@ -218,7 +271,9 @@ footer h5 {
 /* --------------MERCH--------------- */
 
 .box {
-    background: #E0C3FC;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
     border-radius: 3px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
