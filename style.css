@@ -99,6 +99,10 @@ a {
     margin-top: 5px;
 }
 
+.soundbtn:hover {
+    opacity: .7;
+}
+
 /*---------NAVBAR-----------*/
 .navbar {
     list-style: none;
@@ -183,15 +187,18 @@ a {
 }
 
 .flex-content {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-grow: 3;
-    border: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3s);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /*---------------FOOTER----------------------*/
@@ -274,9 +281,10 @@ a {
     background: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
-    border-radius: 3px;
+    border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    backdrop-filter: blur(5px);
     display: flex;
     flex-direction: row;
     justify-content: center;
