@@ -12,7 +12,8 @@ body {
     line-height: 1.6em;
     background-size: 400% 400%;
 	-webkit-animation: gradient 15s ease infinite;
-	        animation: gradient 15s ease infinite;    /* overflow: hidden;*/
+	        animation: gradient 15s ease infinite;  
+    /* overflow: hidden;*/
 }
 
 /* for the background */
@@ -42,6 +43,7 @@ body {
 a {
     text-decoration: none;
 }
+/* fonts */
 @font-face {
     font-family: firstfont;
     src: url(./fonts/ZenDots-Regular.ttf);
@@ -87,7 +89,8 @@ a {
     justify-content: center;
     align-items: center;
     color: aliceblue;
-    background: #9599e2;
+    background: #9a9ae1;
+    border: #9599e2;
     padding: 13px 20px;
     border-radius: 3px;
     cursor: pointer;
@@ -99,8 +102,14 @@ a {
     margin-top: 5px;
 }
 
-.soundbtn:hover {
-    opacity: .7;
+.box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3s);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /*---------NAVBAR-----------*/
@@ -124,7 +133,7 @@ a {
 
 .navbar li a {
     display: block;
-    color: white;
+    color: aliceblue;
     text-decoration: none;
     padding: 50px 20px;
 }
@@ -149,13 +158,73 @@ a {
     font-size:120px;
     padding: 2em;
 }
-/* CAROUSEL */
-.carousel {
+/*--------- SLIDESHOW--------- */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.slides {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  #play, #stop {
+    cursor: pointer;
+    position: relative;
+    margin: 20px auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    width: fit-content;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-} /*change everything later*/
+    }
+    
+    #indicator {
+    text-align: center;
+    }
+    
+    .dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    }
 
 /*----------INFO SECTION----------*/
 .flex-main {
@@ -187,22 +256,15 @@ a {
 }
 
 .flex-content {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-grow: 3;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3s);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /*---------------FOOTER----------------------*/
-.footer {
+/* .footer {
     display: flex;
     flex-direction: row;
 }
@@ -222,7 +284,7 @@ a {
 .footer h5 {
     color: rgba(255, 255, 255, 0.741);
     text-align: center;
-}
+} */
 
 /*--------------------ABOUT---------------------*/
 /*-----------------CONTENT------------------*/
@@ -276,8 +338,14 @@ a {
 }
 
 /* --------------MERCH--------------- */
+.up-merch {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
-.box {
+
+.merch-box {
     background: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
@@ -289,7 +357,7 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-grow: 2;
+    flex-grow: 3;
 }
 
 .item {
@@ -301,32 +369,93 @@ a {
 
 .right, .left {
     display: flex;
-    flex-direction: row;
-    width: 50%;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-/* --------------CONTACT--------------- */
-
-.contact-container {
-    padding-top: 30px;
-    /* background: #E0C3FC; */
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px;
-}
-.item2 {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px;
+}
 
+/* .top {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+} */
+
+/* --------------CONTACT--------------- */
+
+#contact {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    gap: 20px;
 }
 
 
+.contact-box {
+    /* position: relative;
+    padding: 50px;
+    top: 50%;
+    left: 50%; */
+    width: 400px;
+    /* transform: translate(-50%,-50%); */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3s);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
 
+.contact-box h1 {
+    margin: 0 0 30px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.user-box {
+    position: relative;
+}
+
+.user-box input {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    font-size: 16px;
+    font-family: secondfont;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: aliceblue;
+  font-size: 16px;
+}
+
+.contact-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: aliceblue;
+    font-size: 16px;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 2px;
+}
 

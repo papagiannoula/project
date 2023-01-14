@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="slideshow.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -34,17 +35,30 @@
         </ul>
         <h1> ボーカロイド</h1>
         </header>
-    <!---------- CAROUSEL ---------->
-    <section class="container carousel">
-       <img src="./img/miku.png" alt="home" width="600">
+    <!---------- SLIDESHOW ---------->
+    <section class="container slideshow">
+        <!-- change later -->
+       <img src="./img/home.jpg" alt="home" class="slides">
+       <img src="./img/news.jpg" alt="" class="slides">
+       <img src="./img/rinlen.jpg" alt="" class="slides">
+       <a class="prev" onclick="prevSlide()">&#10094;</a>
+       <a class="next" onclick="nextSlide()">&#10095;</a>
+       <button id="play" onclick="playSlide()">Play</button>
+       <button id="stop" onclick="stopSlide()">Stop</button>
     </section>
+    <div id="indicator">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
     <!---------- INFO SECTION ---------->
     <section class="container">
         <div class="flex-main">
             <!-- first box -->
             <div id="upper-section">
                 <div class="flex-img right-img"></div>
-                <div class="flex-content">
+                <div class="flex-content box">
                     <h2>latest news</h2>
                     <p>Lorem ipsum dolor sit amet.</p>
                     <a href="news.html" class="btn">Read More</a>
@@ -52,7 +66,7 @@
             </div>
             <!-- second box -->
             <div id="bottom-section">
-                <div class="flex-content">
+                <div class="flex-content box">
                     <h2>latest merch</h2>
                     <p>Lorem ipsum dolor sit amet.</p>
                     <a href="merch.html" class="btn">dummy</a>
@@ -70,16 +84,61 @@
             <a href="merch.html">Merch</a>
             <a href="contact.html">Contact</a>
         </div>
-        <div class="col-2">
-            <form action="">
-                <input type="text" placeholder="your email">
-            </form>
-        </div>
         <div class="col-3">
-            <h3>CHat With us</h3>
+            <h3>Chat With us</h3>
             <p>pparaskevi16@gmail.com</p> 
         </div>        
         <h5>&#169; 2022 Paraskevi, Inc. All rights reserved.</h5>
     </footer>
+
+
+    <footer>
+        <!-- to change -->
+      <div class="row primary">
+        <div class="column about">
+           <h3>VOCALOID</h3>
+           <p>Lorem, ipsum dolor.</p>
+        
+          <div class="social">
+            <i class="fa-brands fa-facebook-square"></i>
+            <i class="fa-brands fa-youtube-square"></i>
+          </div>
+        </div>
+        
+        <div class="column links">
+        <h3>Links</h3>
+         <ul>
+          <li>
+           <a href="#cookies-policy">Cookies Policy</a>
+          </li>
+          <li>
+           <a href="#terms-of-services">Terms Of Service</a>
+          </li>
+          <li>
+           <a href="#support">Support</a>
+          </li>
+         </ul>
+        </div>
+        
+        <div class="column subscribe">
+         <h3>Let's keep in touch</h3>
+          <div>
+           <input type="email" placeholder="Your email id here" />
+           <button>Subscribe</button>
+          </div>
+        </div>
+     </div>
+        <div class="row copyright">
+          <div class="footer-menu">
+             <a href="">Home</a>
+             <a href="">About</a>
+             <a href="">Contact</a>
+             <a href="">Blog</a>
+             <a href="">Social</a>
+          </div>
+          <h5>&#169; 2022 Paraskevi, Inc. All rights reserved.</h5>
+        </div>
+    </footer>
+        
 </body>
 </html>
