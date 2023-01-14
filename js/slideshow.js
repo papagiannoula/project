@@ -1,3 +1,5 @@
+'use strict'
+
 var slideIndex = 1;
 var slides = document.getElementsByClassName("slides");
 var dots = document.getElementsByClassName("dot");
@@ -16,7 +18,7 @@ function showSlides() {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-    slideInterval = setTimeout(showSlides, 3000);
+    slideInterval = setTimeout(showSlides, 3 * 1000);
 }
 
 function prevSlide() {
@@ -58,7 +60,7 @@ function nextSlide() {
         }
         
         function playSlide() {
-        slideInterval = setTimeout(showSlides,3000);
+        slideInterval = setTimeout(showSlides,3 * 1000);
         playButton.style.display = "none";
         stopButton.style.display = "block";
         }
