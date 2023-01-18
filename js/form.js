@@ -10,7 +10,9 @@ const mail = document.getElementById('mail');
 form.addEventListener ('submit', (e) => {
     if (name.value.trim() === '' || mail.value.trim() ==='') {
         e.preventDefault();
-    }
+        e.target.elements.name.value = '';
+        e.target.elements.email.value = '';
+        e.target.elements.message.value = '';
 })
 
 button.addEventListener('click', () => {
@@ -20,3 +22,5 @@ button.addEventListener('click', () => {
       alert('Wrong name or mail!');
     }
   });
+
+  
