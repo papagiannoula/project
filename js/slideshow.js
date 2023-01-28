@@ -1,5 +1,5 @@
 'use strict'
-
+//Handle the events
 var slideIndex = 1;
 var slides = document.getElementsByClassName("slides");
 var dots = document.getElementsByClassName("dot");

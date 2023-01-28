@@ -44,22 +44,22 @@
         <div class="contact-box">
             <h1>Chat with us</h1>
             <div id="error_message"></div>
-            <form id="contact-form" name="contact-form" method="POST">
+            <form id="contact-form" name="contact-form" onsubmit="return validate()">
                 <div class="user-box">
-                    <input type="text" name="name" required="" id="name">
+                    <input type="text" name="name" id="name">
                     <label for="name">name</label>
                 </div>
                 <div class="user-box">
-                    <input type="email" name="email" required="" id="email">
+                    <input type="text" name="phone" id="phone">
+                    <label for="phone">phone</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="email" id="email">
                     <label for="email">email</label>
                 </div>
                 <div class="user-box">
-                    <input type="email" name="veremail" required="" id="veremail">
+                    <input type="email" name="veremail" id="veremail">
                     <label for="veremail">verify your email</label>
-                </div>
-                <div class="user-box">
-                    <input type="text" name="phone" required="" id="phone">
-                    <label for="phone">phone</label>
                 </div>
                 <div>
                     <textarea name="message" id="message" cols="32" rows="7" placeholder="write us a message"></textarea>

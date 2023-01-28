@@ -1,65 +1,58 @@
 'use strict';
 
-const form = document.forms['contact-form'];
-
 // Handle the submit event
-form.addEventListener('submit', (event) => {
+function validate() {
   // Reference to the form elements
-  const name = form.getElementById['name'];
-  const email = form.getElementById['email'];
-  const veremail = form.getElementById['veremail'];
-  const email_re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/i;
-  const phone = form.getElementById['phone'];
-  const message = form.getElementById['message'];
-
-  let isValid = true;
-  let errorMessages = [];
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const veremail = document.getElementById("veremail").value;
+  const phone = document.getElementById("phone").value;
+  const message = document.getElementById("message").value;
+  const error_message = document.getElementById("error_message");
+  const email_re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  
+  error_message.style.padding = "5px";
 
   // Name checks
-  if (name.value.trim().length < 3) {
+  if (name.length < 3) {
     // Required
-    console.error('Please enter a valid name');
-    errorMessages.push('Please eneter a valid name');
-    isValid = false;
+    error_message.innerHTML = "Please Enter a valid Name";
+    return false;
+    
+  }
+  
+  //Phone check
+  if(isNaN(phone)) {
+    console.error('phone is missing');
+
+    if(phone.length != 10) {
+      //Required
+      error_message.innerHTML =  "Please Enter a valid phone";
+      return false;
+    }
   }
 
   // E-mail checks
-  if (email.value.trim().length === 0) {
-    // Required
-    console.error('E-mail is missing');
-    errorMessages.push('E-mail is missing');
-    isValid = false;
-  } else if (email_re.test(email.value)) {
+  if (email_re.test(email)) {
     // Valid Value
-    console.error('Please enter a valid email');
-    errorMessages.push('Please enter a valid email');
-    isValid = false;
+    error_message.innerHTML = "Please Enter valid Email";
+    return false;
   }
 
   //Verification email test
-  if (email.test(veremail)) {
+  if (veremail != email) {
     // Valid Value
-    console.error('Please enter a valid email');
-    errorMessages.push('Please enter a valid email');
-    isValid = false;
-  }
-
-  //Phone check
-  if(isNaN(phone) || phone.value.trim().length != 10) {
-    //Required
-    console.error('Please Enter a valid phone');
-    errorMessages.push('Please Enter a valid phone');
-    isValid = false;
+    error_message.innerHTML = "wrong email";
+    return false;
   }
 
   //Message check
-  if(message.value.trim().length <= 20) {
+  if(message.length <= 20) {
     //Required
-    console.error('Please Enter More Than 20 Characters');
-    errorMessages.push('Please Enter More Than 20 Characters');
-    isValid = false;
+    error_message.innerHTML = "Please Enter More Than 20 Characters";
+    return false;
   }
 
-  // Prevent submit, if any validation failed
-  if (!isValid) event.preventDefault();
-});
+  alert("Form Submitted Successfully!");
+  return true;
+};
