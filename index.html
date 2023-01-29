@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./js/slideshow.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <!-- main script for the slideshow -->
+    <script src="./js/slideshow.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -38,21 +39,23 @@
     <!---------- SLIDESHOW ---------->
     <section class="container slideshow">
         <!-- change the images later -->
-       <img src="./img/slideshow/slideshow2.jpg" alt="" class="slides">
-       <img src="./img/slideshow/slideshow3.jpg" alt="" class="slides">
-       <img src="./img/slideshow/slideshow4.jpg" alt="" class="slides">
-       <img src="./img/slideshow/slideshow5.jpg" alt="" class="slides">
-       <!-- prev and next btn -->
-       <a class="prev" onclick="prevSlide()">&#10094;</a>
-       <a class="next" onclick="nextSlide()">&#10095;</a>
+        <!-- displaying images -->
+       <img src="./img/slideshow/slideshow2.jpg" alt="image1" class="slides fade">
+       <img src="./img/slideshow/slideshow3.jpg" alt="image2" class="slides fade">
+       <img src="./img/slideshow/slideshow4.jpg" alt="image3" class="slides fade">
+       <img src="./img/slideshow/slideshow5.jpg" alt="image4" class="slides fade">
+       <!-- previous and next buttons -->
+       <a class="slideshow-btn prev" onclick="prevSlide()">&#10094;</a>
+       <a class="slideshow-btn next" onclick="nextSlide()">&#10095;</a>
     </section>
+    <!-- the dots/thumbnail image controls -->
     <div id="indicator">
-        <span class="dot img1" onclick="currentSlide(2)"></span>
-        <span class="dot img2" onclick="currentSlide(3)"></span>
+        <span class="dot img1" onclick="currentSlide(1)"></span>
+        <span class="dot img2" onclick="currentSlide(2)"></span>
         <span class="dot img3" onclick="currentSlide(3)"></span>
-        <span class="dot img4" onclick="currentSlide(3)"></span>
+        <span class="dot img4" onclick="currentSlide(4)"></span>
     </div>
-    <!-- click buttons -->
+    <!-- play and stop buttons -->
     <div class="controls">
         <button class="btn" id="play" onclick="playSlide()">Play</button>
         <button class="btn" id="stop" onclick="stopSlide()">Stop</button>

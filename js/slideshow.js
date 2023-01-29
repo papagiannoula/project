@@ -1,19 +1,21 @@
 'use strict'
-//Handle the events
-var slideIndex = 1;
-var slides = document.getElementsByClassName("slides");
-var dots = document.getElementsByClassName("dot");
-var playButton = document.getElementById("play");
-var stopButton = document.getElementById("stop");
-var slideInterval;
 
+//--------------Overlay------------------
+let slideIndex = 1;
+let slides = document.getElementsByClassName("slides");
+let dots = document.getElementsByClassName("dot");
+let playButton = document.getElementById("play");
+let stopButton = document.getElementById("stop");
+let slideInterval;
+
+//
 function showSlides() {
-    for (var i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     slideIndex++;
     if (slideIndex > slides.length) { slideIndex = 1 }
-    for (var i = 0; i < dots.length; i++) {
+    for (let i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
     slides[slideIndex-1].style.display = "block";
@@ -21,50 +23,55 @@ function showSlides() {
     slideInterval = setTimeout(showSlides, 3 * 1000);
 }
 
+//previous control
 function prevSlide() {
-    for (var i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     slideIndex--;
     if (slideIndex < 1) { slideIndex = slides.length }
-    for (var i = 0; i < dots.length; i++) {
+    for (let i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
 }
 
+//next controls
 function nextSlide() {
-    for (var i = 0; i < slides.length; i++){
+    for (let i = 0; i < slides.length; i++){
         slides[i].style.display = "none";
         }
         slideIndex++;
         if (slideIndex > slides.length) { slideIndex = 1 }
-        for (var i = 0; i < dots.length; i++) {
+        for (let i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
         }
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
         }
         
+        //thumbnail image controls
         function currentSlide(index) {
-        for (var i = 0; i < slides.length; i++) {
+        for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
         }
         slideIndex = index;
-        for (var i = 0; i < dots.length; i++) {
+        for (let i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
         }
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
         }
         
+        //play and stop buttons
+        //play
         function playSlide() {
         slideInterval = setTimeout(showSlides,3 * 1000);
         playButton.style.display = "none";
         stopButton.style.display = "block";
         }
-        
+        //stop
         function stopSlide() {
         clearTimeout(slideInterval);
         stopButton.style.display = "none";
@@ -72,7 +79,7 @@ function nextSlide() {
         }
         
         // Set default style of images to "none"
-        for (var i = 0; i < slides.length; i++) {
+        for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
         }
         
