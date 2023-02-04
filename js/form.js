@@ -16,7 +16,7 @@ function validate() {
   // Name checks
   if (name.length < 3) {
     // Required
-    error_message.innerHTML = "Please Enter a valid Name";
+    error_message.textContent = "Please Enter a valid Name";
     return false;
     
   }
@@ -27,7 +27,7 @@ function validate() {
 
     if(phone.length != 10) {
       //Required
-      error_message.innerHTML =  "Please Enter a valid phone";
+      error_message.textContent =  "Please Enter a valid phone";
       return false;
     }
   }
@@ -35,21 +35,21 @@ function validate() {
   // E-mail checks
   if (email_re.test(email)) {
     // Valid Value
-    error_message.innerHTML = "Please Enter valid Email";
+    error_message.textContent = "Please Enter valid Email";
     return false;
   }
 
   //Verification email test
   if (veremail != email) {
     // Valid Value
-    error_message.innerHTML = "wrong email";
+    error_message.textContent = "wrong email";
     return false;
   }
 
   //Message check
   if(message.length <= 20) {
     //Required
-    error_message.innerHTML = "Please Enter More Than 20 Characters";
+    error_message.textContent = "Please Enter More Than 20 Characters";
     return false;
   }
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="news.css">
+    <script src="./js/news.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -34,8 +35,74 @@
         </ul>
     </header>
 
-    <div class="overlay-text visible">
+    <div class="overlay-text" id="visible" onclick="test()">
         <h1>Click to Start</h1>
+    </div>
+    <div id="text">
+        <div class="news-row-con">
+            <div id="news-1">
+                <div class="group1">
+                    <div class="news-row">
+                        <div class="news-row-top"><h2>box1</h2></div>
+                        <div class="bottom-con">
+                            <div class="bottom-flex">
+                                <div class="post-stuff">
+                                    <div class="post-title"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, sint?</p></div>
+                                    <div class="post-info">
+                                        <h2>dummy</h2><br>
+                                        <h2>date</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <a href=""><h2>go here</h2></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="news-2">
+                <div class="group2">
+                    <div class="news-row">
+                        <div class="news-row-top"><h2>box2</h2></div>
+                        <div class="bottom-con">
+                            <div class="forum-title">title here</div>
+                            <div class="bottom-flex">
+                                <div class="post-stuff">
+                                    <div class="post-title"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, officia.</p></div>
+                                    <div class="post-info">
+                                        <h2>dummy</h2><br>
+                                        <h2>date</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="news-3">
+            <div class="news-row">
+                <div class="news-row-top">67 topics - 168 posts</div>
+                <div class="news-con">
+                <div class="news-title">forum title here</div>
+                <div class="bottom-flex">
+                    <div class="post-stuff">
+                        <div class="post-title">so he wandered down the road</div>
+                        <div class="post-info">
+                            <h2>dummy</h2><br>
+                            <h2>date</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="btns">
+                    <a href="">go</a>
+                </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>

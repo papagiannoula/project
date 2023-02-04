@@ -369,12 +369,30 @@ a {
     align-items: flex-start;
     gap: 20px;
 }
-.flex-container img:hover {
+/* .flex-container img:hover {
     cursor: pointer;
     box-shadow: 0 0 15px 5px #fff, 0 0 22px 15px #f0f, 0 0 30px 20px #0ff;
+} */
+
+.flex-container .top img:hover:nth-child(1) {
+    cursor: pointer;
+    box-shadow: 0 0 30px 5px #6440A2;
 }
 
+.flex-container .top img:hover:nth-child(2) {
+    cursor: pointer;
+    box-shadow: 0 0 20px 5px #7BC57A;
+}
 
+.flex-container .bottom img:hover:nth-child(1) {
+    cursor: pointer;
+    box-shadow: 0 0 20px 5px #F99500;
+}
+
+.flex-container .bottom img:hover:nth-child(2) {
+    cursor: pointer;
+    box-shadow: 0 0 20px 5px #FD6CB7;
+}
 
 /* --------------MERCH--------------- */
 .up-merch {
@@ -506,7 +524,9 @@ textarea {
 
 #error_message {
   margin-bottom: 20px;
-  background: #fe8b8e;
+  background: #ff0008;
+  color: white;
+  font-weight: 700;
   padding: 0px;
   text-align: center;
   font-family: secondfont;
