@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <!-- main script for the slideshow -->
     <script src="./js/slideshow.js" defer></script>
+    <script src="./js/player.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -35,40 +37,46 @@
             </div>
         </ul>
         <h1> ボーカロイド</h1>
-        </header>
+    </header>
     <!---------- SLIDESHOW ---------->
-    <section class="container slideshow">
-        <!-- change the images later -->
-        <!-- displaying images -->
-       <img src="./img/slideshow/slideshow2.jpg" alt="image1" class="slides fade">
-       <img src="./img/slideshow/slideshow3.jpg" alt="image2" class="slides fade">
-       <img src="./img/slideshow/slideshow4.jpg" alt="image3" class="slides fade">
-       <img src="./img/slideshow/slideshow5.jpg" alt="image4" class="slides fade">
-       <!-- previous and next buttons -->
-       <a class="slideshow-btn prev" onclick="prevSlide()">&#10094;</a>
-       <a class="slideshow-btn next" onclick="nextSlide()">&#10095;</a>
-    </section>
-    <!-- the dots/thumbnail image controls -->
-    <div id="indicator">
-        <span class="dot img1" onclick="currentSlide(1)"></span>
-        <span class="dot img2" onclick="currentSlide(2)"></span>
-        <span class="dot img3" onclick="currentSlide(3)"></span>
-        <span class="dot img4" onclick="currentSlide(4)"></span>
-    </div>
-    <!-- play and stop buttons -->
-    <div class="controls">
-        <button class="btn" id="play" onclick="playSlide()">Play</button>
-        <button class="btn" id="stop" onclick="stopSlide()">Stop</button>
-    </div>
+ <!---------- SLIDESHOW ---------->
+ <section class="container slideshow">
+    <!-- change the images later -->
+    <!-- displaying images -->
+   <img src="./img/slideshow/slideshow.jpg" alt="image1" class="slides fade">
+   <img src="./img/slideshow/slideshow1.jpg" alt="image2" class="slides fade">
+   <img src="./img/slideshow/slideshow2.jpg" alt="image3" class="slides fade">
+   <img src="./img/slideshow/slideshow3.jpg" alt="image4" class="slides fade">
+   <img src="./img/slideshow/slideshow4.jpg" alt="image5" class="slides fade">
+   <img src="./img/slideshow/slideshow5.jpg" alt="image6" class="slides fade">
+   <!-- previous and next buttons -->
+   <a class="slideshow-btn prev" onclick="prevSlide()">&#10094;</a>
+   <a class="slideshow-btn next" onclick="nextSlide()">&#10095;</a>
+</section>
+<!-- the dots/thumbnail image controls -->
+<div id="indicator">
+    <span class="dot img1" onclick="currentSlide(1)"></span>
+    <span class="dot img2" onclick="currentSlide(2)"></span>
+    <span class="dot img3" onclick="currentSlide(3)"></span>
+    <span class="dot img4" onclick="currentSlide(4)"></span>
+    <span class="dot img5" onclick="currentSlide(5)"></span>
+    <span class="dot img6" onclick="currentSlide(6)"></span>
+</div>
+<!-- play and stop buttons -->
+<div class="controls">
+    <button class="btn" id="play" onclick="playSlide()">Play</button>
+    <button class="btn" id="stop" onclick="stopSlide()">Stop</button>
+</div>
     <!---------- INFO SECTION ---------->
-    <section class="container">
-        <div class="flex-main">
+    <section class="container" id="home">
+        <div class="sect-wrap">
             <!-- first box (news box)-->
             <div id="upper-section">
-                <div class="flex-img right-img"></div>
+                <div class="info-img infonews-img"></div>
                 <div class="flex-content box">
                     <h2>latest news</h2>
-                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>discover latest concerts and events</p>
+                    <p>learn more about the latest software updates</p>
                     <a href="news.html" class="btn">Read More</a>
                 </div>
             </div>
@@ -76,17 +84,97 @@
             <div id="bottom-section">
                 <div class="flex-content box">
                     <h2>latest merch</h2>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <a href="merch.html" class="btn">dummy</a>
+                    <p>cute figures</p>
+                    <p>fanfiction</p>
+                    <p>and manga</p>
+                    <a href="merch.html" class="btn">Go to MErch</a>
                 </div>
-                <div class="flex-img left-img"></div>
+                <div class="info-img infomerch-img"></div>
             </div>
         </div>
+
+
+
+        <h2 class="sect-tilte">vocaloid of the month</h2>
+
+        <div class="card">
+            <div class="card-content">
+                <p>Hatsune Miku</p>
+                <a href="./about.html">meet more vocaloids</a>
+            </div>
+            <img src="./img/event2.png" alt="card miku">
+        </div>
+
+
+
+
+
+        <!-- music player -->
+        <div class="player">
+	<!-- displaying details -->
+	<div class="details">
+	<!-- <div class="now-playing">PLAYING x OF y</div> -->
+	<div class="track-art"></div>
+	<div class="track-name">Track Name</div>
+	<div class="track-artist">Track Artist</div>
+	</div>
+
+	<!-- displaying track buttons -->
+	<div class="buttons">
+	<div class="prev-track" onclick="prevTrack()">
+		<i class="fa fa-step-backward fa-2x"></i>
+	</div>
+	<div class="playpause-track" onclick="playpauseTrack()">
+		<i class="fa fa-play-circle fa-3x"></i>
+	</div>
+	<div class="next-track" onclick="nextTrack()">
+		<i class="fa fa-step-forward fa-2x"></i>
+	</div>
+	</div>
+
+	<!-- displaying the seek slider-->
+	<div class="slider_container">
+	<div class="current-time">00:00</div>
+	<input type="range" min="1" max="100"
+		value="0" class="seek_slider" onchange="seekTo()">
+	<div class="total-duration">00:00</div>
+	</div>
+
+	<!-- displaying the volume slider-->
+	<div class="slider_container">
+	<i class="fa fa-volume-down"></i>
+	<input type="range" min="1" max="100"
+		value="99" class="volume_slider" onchange="setVolume()">
+	<i class="fa fa-volume-up"></i>
+	</div>
+</div>
+
+        
+        
     </section>
+
  <!---------- FOOTER ---------->
-    <!-- change later -->
-    <footer>
-        <h5>&#169; 2022 Paraskevi, Inc. All rights reserved.</h5>
-    </footer>
+<footer id="footer">
+    <div class="footer-content">
+        <h3>vocaloid site</h3>
+        <ul class="socials">
+            <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-spotify"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>&#169; 2022 Paraskevi, Inc. All rights reserved.</p>
+        <div class="footer-menu">
+            <ul class="f-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="news.html">Updates</a></li>
+                <li><a href="merch.html">Merch</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {height: 100vh;}
-    </style>
+    <script src="./js/lightbox.js" defer></script>
 </head>
 <body>
     <!---------- NAVIGATION BAR ---------->
@@ -40,24 +38,51 @@
     <div class="flex-container">
         <div class="right-side">
             <div class="top">
-                <img src="./img/about/gakpo.jpg" alt="gakpo" width="200" >
-                <img src="./img/about/gumi.jpg" alt="gumi" width="180" >
+                <a href="" class="lightbox"><img class="thumb" src="./img/about/gakpo.jpg" alt="gakpo" width="200"></a>
+                <a href="" class="lightbox"><img class="thumb" src="./img/about/gumi.jpg" alt="gumi" width="180"></a>
+                <div class="close">✘</div>
             </div>
             <div class="bottom">
-                <img src="./img/about/rinlen.jpg" alt="rin&len" width="220" >
-                <img src="./img/about/ia.jpg" alt="ia" width="200">
+                <a href="" class="lightbox"><img class="thumb" src="./img/about/rinlen.jpg" alt="rinlen" width="220"></a>
+                <a href="" class="lightbox"><img class="thumb" src="./img/about/miku.jpg" alt="ia" width="200"></a>
+                <div class="backdrop"></div>
+                <div class="lightbox-target">
+                    <div class="close">✘</div>
+                    <img src="" alt="" class="large">
+                </div>
+                <div class="clear"></div>
             </div>
         </div>
         <div class="left-side">
             <h1>The fictional artists who became real</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus eveniet voluptatem harum deserunt! Fugit, accusamus odio aperiam porro accusantium eligendi quam, iusto quod corporis labore dolore. Modi ipsam quisquam iure. Consectetur maiores ipsam sint illum, libero magnam atque! Architecto odio modi quidem? Qui unde omnis earum modi quo culpa alias.</p>
+            <p>Hatsune Miku, Kagamine Rin, Kagamine Len, Kamui Gakpo and Gumi are characters developed for the VOCALOID product</p>
         </div>
-
     </div>
-    <!---------- FOOTER ---------->
-    <!-- change later -->
-    <footer>
-        <h5>&#169; 2022 Paraskevi, Inc. All rights reserved.</h5>
+
+
+<!---------- FOOTER ---------->
+<footer id="footer">
+    <div class="footer-content">
+        <h3>vocaloid site</h3>
+        <ul class="socials">
+            <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-spotify"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+        </ul>
+    </div>
+        <div class="footer-bottom">
+            <p>&#169; 2022 Paraskevi, Inc. All rights reserved.</p>
+            <div class="footer-menu">
+                <ul class="f-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">Updates</a></li>
+                    <li><a href="merch.html">Merch</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

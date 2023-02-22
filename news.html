@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <script src="./js/news.js" defer></script>
 </head>
 <body>
@@ -35,74 +36,100 @@
         </ul>
     </header>
 
-    <div class="overlay-text" id="visible" onclick="test()">
-        <h1>Click to Start</h1>
-    </div>
-    <div id="text">
-        <div class="news-row-con">
-            <div id="news-1">
-                <div class="group1">
-                    <div class="news-row">
-                        <div class="news-row-top"><h2>box1</h2></div>
-                        <div class="bottom-con">
-                            <div class="bottom-flex">
-                                <div class="post-stuff">
-                                    <div class="post-title"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, sint?</p></div>
-                                    <div class="post-info">
-                                        <h2>dummy</h2><br>
-                                        <h2>date</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="btns">
-                                <a href=""><h2>go here</h2></a>
-                            </div>
-                        </div>
+    <!-- <div class="overlay-text" id="visible">
+        <h1 onclick="test()">Click to Start</h1>
+    </div> -->
+    <div class="container" id="update">
+        <div class="sect-wrap">
+            <h2 class="sect-title">concerts</h2>
+            <div class="overview">
+                <div class="label">
+                    <div class="area">Event</div>
+                    <div class="date">Date</div>
+                </div>
+                <div class="cont">
+                    <div class="area">1st show</div>
+                    <div class="date"><span>nov 6</span>
+                    </div>
+                    <div class="live live-noon">
+                        <i class="fas fa-sun"></i>
+                        "10:30 AM START"
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="area">2nd show</div>
+                    <div class="date"><span>nov 6</span>
+                    </div>
+                    <div class="live live-night">
+                        <i class="fas fa-moon"></i>
+                        "5:30 PM START"
+                    </div>
+                </div>
+                <div class="overview">
+                    the main expo content will be identical for each showing.
+                    The show will be streamed"
+                    <span style="font-weight:800;">free</span>
+                    "of charge.
+                </div>
+            </div>
+            <h2 class="sect-title">software updates</h2> 
+            <div class="overview">
+                <div class="label">
+                    <div class="area">Event</div>
+                    <div class="date">Date</div>
+                    <div class="details">Details</div>
+                </div>
+                <div class="cont">
+                    <div class="area">vocaloid6 editor updater ver.6.1.0 release</div>
+                    <div class="date"><span>15.02.23</span></div>
+                    <div class="details">
+                        <ul>
+                            <li>Support Chinese song synthesis</li>
+                            <li>Improved synthesis quality of singing voices</li>
+                            <li>Improved pronunciation of short notes</li>
+                            <li>Fixed other bugs, improved stability and performance</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="area">vocaloid5 editor updater ver 5.7.1 release </div>
+                    <div class="date"><span>22.12.22</span></div>
+                    <div class="details">
+                        <ul>
+                            <li>Fixed bug where VOCALOID5 VSTi/AU will not open on macOS 13 Ventura</li>
+                            <li>Fixed bug that incorrectly recognized the file version of project to be imported</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div id="news-2">
-                <div class="group2">
-                    <div class="news-row">
-                        <div class="news-row-top"><h2>box2</h2></div>
-                        <div class="bottom-con">
-                            <div class="forum-title">title here</div>
-                            <div class="bottom-flex">
-                                <div class="post-stuff">
-                                    <div class="post-title"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, officia.</p></div>
-                                    <div class="post-info">
-                                        <h2>dummy</h2><br>
-                                        <h2>date</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div id="news-3">
-            <div class="news-row">
-                <div class="news-row-top">67 topics - 168 posts</div>
-                <div class="news-con">
-                <div class="news-title">forum title here</div>
-                <div class="bottom-flex">
-                    <div class="post-stuff">
-                        <div class="post-title">so he wandered down the road</div>
-                        <div class="post-info">
-                            <h2>dummy</h2><br>
-                            <h2>date</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="btns">
-                    <a href="">go</a>
-                </div>
-                </div>
-            </div>
-        </div>
-
+        </div>    
     </div>
+    
+ <!---------- FOOTER ---------->
+ <footer id="footer">
+    <div class="footer-content">
+        <h3>vocaloid site</h3>
+        <ul class="socials">
+            <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-spotify"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>&#169; 2022 Paraskevi, Inc. All rights reserved.</p>
+        <div class="footer-menu">
+            <ul class="f-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="news.html">Updates</a></li>
+                <li><a href="merch.html">Merch</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
