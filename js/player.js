@@ -23,27 +23,33 @@ let curr_track = document.createElement('audio');
 let track_list = [
   {
     name: "World is Mine",
-    artist: "HAtsune Miku",
-    image: "https://i.pinimg.com/originals/bd/38/b8/bd38b8584455009f03e1c87dfda809ac.jpg",
-    path: "worldismine.mp3"
-  },
-  // {
-  //   name: "Popipo",
-  //   artist: "Hatsune Miku",
-  //   image: "https://i.pinimg.com/originals/3f/5b/53/3f5b53b053042ec7c2fbaf7b5b8f6482.jpg",
-  //   path: "popipo.mp3"
-  // },
-  {
-    name: "Levan Polka",
     artist: "Hatsune Miku",
-    image: "https://i.pinimg.com/originals/48/db/b4/48dbb48c82c309ae3c1ea0bf717d5e91.jpg",
-    path: "levanpolka.mp3"
+    image: "../img/musicplayer/worldismine.jpg",
+    path: "../music/worldismine.mp3"
   },
   {
-    name: "Anamanagutchi",
+    name: "Miku",
     artist: "Hatsune Miku",
-    image: "https://i.pinimg.com/originals/cb/80/ca/cb80cab2bd246f8dd9a932064a9ee06b.jpg",
-    path: "anamanagutchi.mp3"
+    image: "../img/musicplayer/miku.jpg",
+    path: "../music/miku.mp3"
+  },
+  {
+    name: "Popipo",
+    artist: "Hatsune Miku",
+    image: "../img/musicplayer/popipo.jpg",
+    path: "../music/popipo.mp3"
+  },
+  {
+    name: "Romeo and Cinderella",
+    artist: "Hatsune Miku",
+    image: "../img/musicplayer/romeoandcinderella.jpg",
+    path: "../music/romeoandcinderella.mp3"
+  },
+  {
+    name: "Rolling girl",
+    artist: "Hatsune Miku",
+    image: "../img/musicplayer/rollinggirl.jpg",
+    path: "../music/rollinggirl.mp3"
   },
 ];
 

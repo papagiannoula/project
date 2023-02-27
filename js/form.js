@@ -7,6 +7,7 @@ function validate() {
   const email = document.getElementById("email").value;
   const veremail = document.getElementById("veremail").value;
   const phone = document.getElementById("phone").value;
+  const adress = document.getElementById("adress").value;
   const message = document.getElementById("message").value;
   const error_message = document.getElementById("error_message");
   const email_re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
