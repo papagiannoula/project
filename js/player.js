@@ -28,12 +28,6 @@ let track_list = [
     path: "../music/worldismine.mp3"
   },
   {
-    name: "Miku",
-    artist: "Hatsune Miku",
-    image: "../img/musicplayer/miku.jpg",
-    path: "../music/miku.mp3"
-  },
-  {
     name: "Popipo",
     artist: "Hatsune Miku",
     image: "../img/musicplayer/popipo.jpg",
@@ -50,6 +44,12 @@ let track_list = [
     artist: "Hatsune Miku",
     image: "../img/musicplayer/rollinggirl.jpg",
     path: "../music/rollinggirl.mp3"
+  },
+  {
+    name: "Miku",
+    artist: "Hatsune Miku",
+    image: "../img/musicplayer/miku.jpg",
+    path: "../music/miku.mp3"
   },
 ];
 
