@@ -7,14 +7,12 @@
 
 /*---------- MAIN STYLING ----------*/
 body {
-    /* background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
     background: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #46eefa, #5ffbf1);
     font-size: 1vw;
     line-height: 1.6em;
     background-size: 400% 400%;
     -webkit-animation: gradient 10s ease infinite;
     animation: gradient 10s ease infinite;
-    height: 100vh;
 }
 
 /* for the background */
@@ -48,6 +46,7 @@ body {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 /*-------- fonts ----------*/
@@ -83,10 +82,6 @@ a {
     padding-top: 20px;
 }
 
-a {
-    cursor: pointer;
-}
-
 /*---------- UTILITY CLASSES ----------*/
 .wrapper {
     display: flex;
@@ -97,6 +92,8 @@ a {
 }
 
 .sect-wrap {
+    display: flex;
+    flex-direction: column;
     font-family: secondfont;
     width: 70%;
     padding: 50px 50px;
@@ -164,7 +161,6 @@ a {
 .navbar {
     width: 80%;
     list-style: none;
-    background-color: rgba(255, 255, 255, 0);
     overflow: auto;
     display: flex;
     justify-content: center;
@@ -178,7 +174,6 @@ a {
 
 .navbar li a {
     display: block;
-    color: aliceblue;
     text-decoration: none;
     padding: 50px 20px;
 }
@@ -187,6 +182,11 @@ a {
     text-shadow: 2px 2px 5px rgb(230, 152, 253);
     font-size: 1.1em;
     transition: all .5s;
+}
+
+.navbar a:active {
+    text-shadow: 2px 2px 5px rgb(230, 152, 253);
+    font-size: 1.1em;
 }
 
 .nav-container h2 a {
@@ -200,7 +200,6 @@ a {
     width: 100vw;
     padding-top: 40px;
     margin-top: 80px;
-    color: aliceblue;
 }
 
 .footer-content {
@@ -209,15 +208,6 @@ a {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-}
-
-.footer-content p {
-    font-family: secondfont;
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
-    color: aliceblue;
 }
 
 .socials {
@@ -234,9 +224,8 @@ a {
 
 .socials a {
     text-decoration: none;
-    color: aliceblue;
     border: 1px solid aliceblue;
-    padding: 10px;
+    padding: 5px;
     border-radius: 50%;
 }
 
@@ -259,20 +248,6 @@ a {
 .footer-bottom p {
     float: left;
     font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-}
-
-.footer-bottom p a {
-    color: #44bae8;
-    font-size: 16px;
-    text-decoration: none;
-}
-
-.footer-bottom span {
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;
 }
 
 .footer-menu {
@@ -281,6 +256,8 @@ a {
 
 .footer-menu ul {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-menu ul li {
@@ -289,12 +266,11 @@ a {
 }
 
 .footer-menu ul li a {
-    color: aliceblue;
     text-decoration: none;
 }
 
 .footer-menu ul li a:hover {
-    color: #27bcda;
+    color: #650de8;
 }
 
 /*----------------------- HOME ------------------------------------*/
@@ -337,7 +313,7 @@ a {
 .slideshow-btn:hover,
 .slideshow-btn:focus {
     color: #650de8;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 /*on hover*/
@@ -363,7 +339,6 @@ a {
     margin: 10px auto;
     padding: 10px;
     color: #650de8;
-    font-weight: bold;
     font-size: 20px;
     transition: .5s ease;
     border-radius: 3px;
@@ -382,11 +357,10 @@ a {
 
 .dot {
     cursor: pointer;
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     margin: 0 2px;
-    margin-top: 10px;
-    border-radius: square;
+    border-radius: 50%;
     display: inline-block;
     transition: .5s ease;
 }
@@ -415,7 +389,7 @@ a {
 
 @keyframes fade {
     from {
-        opacity: .4
+        opacity: .5
     }
 
     to {
@@ -438,7 +412,7 @@ a {
 .info-img {
     height: 352px;
     flex-grow: 2;
-    background: url(./img/news.jpg) no-repeat center center/cover;
+    background: url(./img/news-box.jpg) no-repeat center center/cover;
 }
 
 .info-content {
@@ -461,7 +435,7 @@ a {
     height: 330px;
     display: flex;
     align-items: center;
-    background: url(./img/background1.png);
+    background: url(./img/card-background.png);
     object-fit: cover;
     object-position: center;
 }
@@ -483,7 +457,6 @@ a {
 .card-content {
     position: relative;
     left: 20%;
-    color: aliceblue;
     opacity: 0;
     transition: .5s;
 }
@@ -495,10 +468,10 @@ a {
 
 .card-content a {
     color: #650de8;
-    padding: 5px 10px;
+    padding: 10px 10px;
     text-decoration: none;
     background: aliceblue;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 .card-content p {
@@ -507,6 +480,7 @@ a {
     transition: all .5s;
     font-family: firstfont;
 }
+
 /*------card end-------*/
 
 /*--------- music player start---------*/
@@ -543,13 +517,13 @@ a {
 }
 
 .track-name {
-    font-size: 2rem;
+    font-size: 1.5em;
     color: aliceblue;
     font-family: secondfont;
 }
 
 .track-artist {
-    font-size: 2rem;
+    font-size: 1em;
     font-family: firstfont;
     padding-top: 5px;
     color: aliceblue;
@@ -568,7 +542,6 @@ a {
 .next-track {
     padding: 25px;
     opacity: 0.8;
-    /* Smoothly transition the opacity */
     transition: opacity .2s;
 }
 
@@ -596,17 +569,6 @@ a {
     background: aliceblue;
     opacity: 0.7;
     transition: opacity .2s;
-}
-
-/* Modify the appearance of the slider thumb */
-.seek_slider::slider-thumb,
-.volume_slider::slider-thumb {
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    background: aliceblue;
-    cursor: pointer;
-    border-radius: 50%;
 }
 
 /* Change the opacity when mouse is hovered */
@@ -648,14 +610,20 @@ i.fa-step-backward {
 /*-----------------CONTENT------------------*/
 /*-----start-----*/
 .about-container {
-    width: 1100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
     width: 100vw;
     gap: 40px;
 }
+
+.about-section {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*right side (images)*/
 .right-side img {
     border-radius: 3px;
@@ -667,13 +635,17 @@ i.fa-step-backward {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    /* width: 50%; */
+}
+
+.left-side {
+    width: 50%;
 }
 
 .left-side h1,
 .left-side p {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
-    color: aliceblue;
 }
 
 .top {
@@ -689,32 +661,26 @@ i.fa-step-backward {
 }
 
 .top a:nth-child(1):hover img {
-    cursor: pointer;
     box-shadow: 0px 0px 30px 5px #6440A2;
 }
 
 .top a:nth-child(2):hover img {
-    cursor: pointer;
     box-shadow: 0 0 30px 5px #7BC57A;
 }
 
 .bottom a:nth-child(1):hover img {
-    cursor: pointer;
     box-shadow: 0 0 30px 5px #F99500;
 }
 
 .bottom a:nth-child(2):hover img {
-    cursor: pointer;
     box-shadow: 0 0 30px 5px #16B0BA;
 }
+
 /*left side(text)*/
 .left-side h1 {
     text-shadow: 2px 2px 5px rgb(230, 152, 253);
 }
 
-.left-side p {
-    font-size: large;
-}
 
 .left-side {
     width: 50vw;
@@ -724,16 +690,14 @@ i.fa-step-backward {
     list-style: none;
     color: aliceblue;
     font-family: secondfont;
-    overflow: auto;
     display: flex;
     justify-content: center;
-    margin: 30px;
 }
-
 
 /*---------------------NEWS---------------------*/
 /*------- start --------*/
 .overview {
+    width: 100%;
     text-align: center;
     color: aliceblue;
     font-family: secondfont;
@@ -753,7 +717,7 @@ i.fa-step-backward {
 }
 
 .label .date {
-    width: 180px;
+    width: 190px;
 }
 
 .label .details {
@@ -765,7 +729,6 @@ i.fa-step-backward {
     padding: 40px 0;
     align-items: center;
     border-bottom: 2px solid aliceblue;
-    color: aliceblue;
 }
 
 .cont .area {
@@ -774,29 +737,15 @@ i.fa-step-backward {
     font-size: 30px;
     font-family: secondfont;
     line-height: 38px;
-    color: aliceblue;
 }
 
 .cont .date {
     width: 180px;
-    margin-right: 10px;
-    color: aliceblue;
     font-weight: 600;
-}
-
-.cont .live {
-    color: aliceblue;
-    font-size: 17px;
 }
 
 .overview span {
     font-weight: 800;
-}
-
-.cont .details {
-    width: 500px;
-    margin-right: 10px;
-    color: aliceblue;
 }
 
 .cont .details ul li {
@@ -804,6 +753,7 @@ i.fa-step-backward {
     font-family: secondfont;
     text-align: left;
 }
+
 /*--------end-------*/
 
 /* --------------MERCH--------------- */
@@ -842,6 +792,12 @@ i.fa-step-backward {
 
 /* --------------CONTACT--------------- */
 /*-----start-----*/
+.contact-len:hover,
+.contact-rin:hover {
+    transition: all .5s ease;
+    transform: scale(1.1);
+}
+
 #contact {
     display: flex;
     width: 100%;
@@ -919,7 +875,7 @@ textarea {
 #error_message {
     margin-bottom: 20px;
     background: #fa444a;
-    color: white;
+    color: aliceblue;
     font-weight: 700;
     padding: 0;
     text-align: center;
@@ -927,17 +883,19 @@ textarea {
     font-size: 16px;
     transition: all .5s ease;
 }
+
 /*-----end------*/
 
 /*-----------------CHARACTERS ABOUT-----------------------*/
-.menu, .charmenu {
+.menu,
+.charmenu {
     width: 70%;
     list-style: none;
     display: flex;
     justify-content: center;
- }
+}
 
-.charmenu a{
+.charmenu a {
     display: block;
     margin: 20px;
     padding: 50px;
@@ -966,7 +924,7 @@ textarea {
     background-size: cover;
 }
 
- .mn-miku a {
+.mn-miku a {
     background: url(./img/about/menu/mn-miku.jpg) no-repeat center;
     background-size: cover;
 }
@@ -1000,24 +958,133 @@ textarea {
     right: 80%;
 }
 
-
+/*-------------responsive css------------------*/
 /*media queries*/
-@media (max-width:500px) {
-    .navbar{
+
+
+/*Tablet*/
+@media(min-width:501px) and (max-width:768px) {
+
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .nav-container{
+        width: 100%;
+        justify-content: center;
+        font-size: 1.5em;
+    }
+  
+    /* home */
+    #slideshow, #indicator, #controls, #speed {
+        display: none;
+    }
+    #play {
+        display: none;
+    }
+
+    .info-content {
+        line-height: 2em;
+        font-size: 2em;
+    }
+
+    .track-name, .track-artist {
+        font-size: 2em;
+    }
+    
+    /* about */
+    .about-section {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .left-side {
+        width: 100%;
+    }
+
+    #welcome {
         display: flex;
         flex-direction: column;
     }
-    #slideshow{
+
+    .info-img {
         display: none;
     }
-    #upper-section .info-img {
-        display: none;
-    }
+
+    /* about */
     .about-container {
         display: flex;
-        flex-direction: column;
+        width: 100vw;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 
+    .left-side h1 {
+        font-size: 3em;
+        letter-spacing: 3px;
+        margin: 10px;
+    }
+
+    .left-side #list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+    }
+
+    /* character info section */
+    .menu {
+        width: 100%;
+    }
+    .profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        line-height: 1.7em;
+    }
+
+    .chara-img {
+        display: none;
+    }
+
+    .len {
+        right: 0;
+        top: 90%;
+    }
+
+
+    /* news */
+    .sect-wrap {
+        width: 100%;
+    }
+    .label, .cont {
+        font-size: 2em;
+    }
+    
+    .cont .live {
+        display: none;
+    }
+
+    .label .details, .label .date {
+        display: none;
+    }
+
+    .cont .details {
+        line-height: 1.5em;
+    }
+
+    /* contact */
+    /* hide the svg and show only contact */
+    .contact-len,
+    .contact-rin {
+        display: none;
+    }
 
     .footer-menu ul {
         display: flex;
@@ -1025,5 +1092,155 @@ textarea {
         margin-bottom: 20px;
     }
 
+    .footer-menu ul li {
+        font-size: 2em;
+    }
+}
+
+/*Smartphone*/
+@media (max-width:500px) {
+    .sect-wrap {
+        width: 100%;
+    }
+    .sect-title {
+        font-size: 3em;
+    }
+
+    /* navbar */
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+     .nav-container{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+    }
+    .navbar li a {
+        padding: 10px;
+    }
+
+    /* home */
+    #welcome .first {
+        display: none;
+    }
+
+    #welcome .title {
+        font-size: 2em;
+        line-height: 2em;
+    }
+
+    #slideshow, #indicator, #controls, #speed {
+        display: none;
+    }
+
+    #play {
+        display: none;
+    }
+
+    .info-content {
+        line-height: 3em;
+        font-size: 3em;
+    }
+
+    .info-img {
+        display: none;
+    }
+
+    .track-name, .track-artist {
+        font-size: 2em;
+    }
+    
+    /* about */
+    .about-section {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .left-side {
+        width: 100%;
+    }
+
+    .left-side h1 {
+        font-size: 3em;
+        letter-spacing: 3px;
+        margin: 10px;
+    }
+
+    .left-side #list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+    }
+
+    /* character info section */
+    .menu {
+        width: 100%;
+    }
+    .charmenu a {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        font-size: 3em;
+        line-height: 1.7em;
+    }
+
+    .info-section .sect-title {
+        font-size: 2em;
+    }
+
+    .chara-img {
+        display: none;
+    }
+
+    .char-prof .len {
+        right: 0;
+        top: 90%;
+    }
+
+
+    /* news */
+    .label, .cont {
+        font-size: 2em;
+    }
+    
+    .cont .live {
+        display: none;
+    }
+
+    .label .details, .label .date {
+        display: none;
+    }
+
+    .cont .details {
+        line-height: 1.5em;
+    }
+
+    /* contact */
+    /* hide the svg and show only contact */
+    .contact-len,
+    .contact-rin {
+        display: none;
+    }
+
+    /* footer */
+    .footer-menu ul {
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 2em;
+    }
+    .footer-menu ul li {
+        font-size: 2em;
+    }
 
 }

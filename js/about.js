@@ -3,7 +3,7 @@
 // Make a new XMLHttpRequest object
 const req = new XMLHttpRequest();
 
-// Set the request parameters
+// Set the parameters
 req.open('GET', './names.json');
 req.responseType = 'json';
 
@@ -13,16 +13,15 @@ req.addEventListener('readystatechange', () => {
 
   // When the request is done...
   if (req.readyState === XMLHttpRequest.DONE) {
-    // XMLHttpRequest.DONE === 4
-    // Check the response status and act accordingly
     switch (req.status) {
       case 200:
         console.log(req.response);
         const ul = document.getElementById('list');
 
-        // Show the car data (from json) in a list
+        // Show the name data in a list
         for (let name of req.response) {
           const li = document.createElement('li');
+          li.style.padding="5px"; // css didnt load
           li.textContent = `${name.name}`;
           ul.appendChild(li);
         }

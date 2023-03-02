@@ -47,6 +47,12 @@ function validate() {
     return false;
   }
 
+  //Adress check
+  if (adress.trim().length === 0) {
+    error_message.textContent = "Please enter adress"
+    return false;
+  }
+
   //Message check
   if(message.length <= 20) {
     //Required
