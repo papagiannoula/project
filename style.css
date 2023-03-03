@@ -13,6 +13,7 @@ body {
     background-size: 400% 400%;
     -webkit-animation: gradient 10s ease infinite;
     animation: gradient 10s ease infinite;
+    overflow-x: hidden;
 }
 
 /* for the background */
@@ -604,6 +605,7 @@ i.fa-step-backward {
     cursor: pointer;
     color: aliceblue;
 }
+
 /*------music player end------*/
 
 /*--------------------ABOUT---------------------*/
@@ -965,22 +967,30 @@ textarea {
 /*Tablet*/
 @media(min-width:501px) and (max-width:768px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
     .navbar {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    
-    .nav-container{
+
+    .nav-container {
         width: 100%;
         justify-content: center;
         font-size: 1.5em;
     }
-  
+
     /* home */
-    #slideshow, #indicator, #controls, #speed {
+    #slideshow,
+    #indicator,
+    #controls,
+    #speed {
         display: none;
     }
+
     #play {
         display: none;
     }
@@ -990,10 +1000,11 @@ textarea {
         font-size: 2em;
     }
 
-    .track-name, .track-artist {
+    .track-name,
+    .track-artist {
         font-size: 2em;
     }
-    
+
     /* about */
     .about-section {
         flex-direction: column;
@@ -1040,6 +1051,7 @@ textarea {
     .menu {
         width: 100%;
     }
+
     .profile {
         display: flex;
         flex-direction: column;
@@ -1063,15 +1075,18 @@ textarea {
     .sect-wrap {
         width: 100%;
     }
-    .label, .cont {
+
+    .label,
+    .cont {
         font-size: 2em;
     }
-    
+
     .cont .live {
         display: none;
     }
 
-    .label .details, .label .date {
+    .label .details,
+    .label .date {
         display: none;
     }
 
@@ -1099,9 +1114,14 @@ textarea {
 
 /*Smartphone*/
 @media (max-width:500px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .sect-wrap {
         width: 100%;
     }
+
     .sect-title {
         font-size: 3em;
     }
@@ -1113,12 +1133,13 @@ textarea {
         align-items: center;
     }
 
-     .nav-container{
+    .nav-container {
         width: 100%;
         justify-content: center;
         align-items: center;
         font-size: 1.5em;
     }
+
     .navbar li a {
         padding: 10px;
     }
@@ -1133,7 +1154,10 @@ textarea {
         line-height: 2em;
     }
 
-    #slideshow, #indicator, #controls, #speed {
+    #slideshow,
+    #indicator,
+    #controls,
+    #speed {
         display: none;
     }
 
@@ -1150,10 +1174,11 @@ textarea {
         display: none;
     }
 
-    .track-name, .track-artist {
+    .track-name,
+    .track-artist {
         font-size: 2em;
     }
-    
+
     /* about */
     .about-section {
         flex-direction: column;
@@ -1182,6 +1207,7 @@ textarea {
     .menu {
         width: 100%;
     }
+
     .charmenu a {
         margin: 10px;
         padding: 10px;
@@ -1209,15 +1235,17 @@ textarea {
 
 
     /* news */
-    .label, .cont {
+    .label,
+    .cont {
         font-size: 2em;
     }
-    
+
     .cont .live {
         display: none;
     }
 
-    .label .details, .label .date {
+    .label .details,
+    .label .date {
         display: none;
     }
 
@@ -1239,6 +1267,7 @@ textarea {
         margin-bottom: 20px;
         font-size: 2em;
     }
+
     .footer-menu ul li {
         font-size: 2em;
     }
